@@ -104,3 +104,72 @@ window.onscroll = function () {
 window.addEventListener('scroll',function(){
     header.classList.toggle('shadow',this.window.scrollY > 30)
 })
+
+/****************************EFFECT****************************/
+// Initial setup
+let canvas = document.createElement("canvas");
+document.body.appendChild(canvas);
+let context = canvas.getContext("2d");
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+
+window.addEventListener('resize', resizeCanvas, false);
+resizeCanvas();
+
+let maxx = canvas.width;
+let maxy = canvas.height;
+let halfx = maxx / 2;
+let halfy = maxy / 2;
+
+let dotCount = 200;
+let dots = [];
+
+// Create dots
+for (let i = 0; i < dotCount; i++) {
+    dots.push(new Dot());
+}
+
+// Dot class
+function Dot() {
+    this.rad_x = 2 * Math.random() * halfx + 1;
+    this.rad_y = 1.2 * Math.random() * halfy + 1;
+    this.alpha = Math.random() * 360 + 1;
+    this.speed = (Math.random() < 0.5 ? 1 : -1) * 0.1;
+    this.size = Math.random() * 5 + 1;
+    this.color = Math.floor(Math.random() * 256);
+}
+
+// Drawing dot
+Dot.prototype.draw = function() {
+    let dx = halfx + this.rad_x * Math.cos(this.alpha / 180 * Math.PI);
+    let dy = halfy + this.rad_y * Math.sin(this.alpha / 180 * Math.PI);
+    context.fillStyle = `rgb(${this.color},${this.color},${this.color})`;
+    context.fillRect(dx, dy, this.size, this.size);
+};
+
+// Calculate new position in polar coordinates
+Dot.prototype.move = function() {
+    this.alpha += this.speed;
+    if (Math.random() < 0.5) {
+        this.color = (this.color + 1) % 256;
+    } else {
+        this.color = (this.color - 1 + 256) % 256;
+    }
+};
+
+// Dots animation
+function render() {
+    context.fillStyle = "#000000";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+    for (let dot of dots) {
+        dot.draw();
+        dot.move();
+    }
+    requestAnimationFrame(render);
+}
+
+// Start animation
+render();

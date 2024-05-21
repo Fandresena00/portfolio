@@ -27,7 +27,7 @@ body {
     background-color: #05060c;
 }
 
-section{
+section {
     max-width: 100%;
 }
 
@@ -53,6 +53,7 @@ section{
     display: flex;
     transition: all 0.5s linear;
 }
+
 #my_header.shadow {
     background-color: #11151e;
 }
@@ -453,6 +454,7 @@ footer i {
         align-items: center;
         text-align: center;
     }
+
     .navbar ul li a:hover {
         color: #000000;
         text-shadow: 0 0 1px #000000e9;
@@ -465,6 +467,7 @@ footer i {
     .navbar ul li a:hover::before {
         width: 0%;
     }
+
     .navbar ul li a.active_color {
         color: #000000;
         text-shadow: 0 0 3px #000000e9;
@@ -616,4 +619,17 @@ footer i {
     .logo {
         font-size: 2rem;
     }
+}
+
+/******************EFFECT****************/
+canvas {
+    display: block;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+header, section, footer {
+    z-index: 1; /* Positionne ces éléments devant le canvas */
 }
