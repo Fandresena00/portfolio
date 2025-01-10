@@ -1,6 +1,5 @@
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Competence from "./pages/Competence";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Profil from "./pages/Profil";
@@ -12,7 +11,6 @@ export default function App() {
       <Header />
       <Home />
       <Profil />
-      <Competence />
       <Project />
       <Contact />
       <Footer />
