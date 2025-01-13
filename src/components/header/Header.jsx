@@ -1,27 +1,52 @@
+import { Link } from "react-scroll";
 import styles from "./Header.module.css";
+import logo from "/logo.svg";
 
 export default function Header() {
   return (
     <header className={styles.container}>
-      <div className={styles.animation}></div>
-      <nav>
-        <h2 className={styles.logo}>MyLogo</h2>
-        <h3 className={styles.cursor_animator}>cursor animator</h3>
+      <nav className="metallic-gradient">
+        <img src={logo} className={styles.logo} />
         <ul className={styles.navbar}>
           <li>
-            <a href="#home">Home</a>
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className={styles.nav_link}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a href="#profil">Profil</a>
+            <Link
+              to="profile"
+              smooth={true}
+              duration={500}
+              className={styles.nav_link}
+            >
+              Profile
+            </Link>
           </li>
           <li>
-            <a href="#competence">Competence</a>
+            <Link
+              to="project"
+              smooth={true}
+              duration={500}
+              className={styles.nav_link}
+            >
+              Project
+            </Link>
           </li>
           <li>
-            <a href="#project">Project</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className={styles.nav_link}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

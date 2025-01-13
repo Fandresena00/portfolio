@@ -1,0 +1,56 @@
+.container {
+  padding: 10vh 5vw;
+  text-align: center;
+}
+
+.container h2 {
+  font-size: 200%;
+  color: var(--tech-blue-main);
+}
+.change_nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 1.5rem 0.5rem;
+}
+
+.change {
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  margin: 0 1rem;
+  padding: 0.2rem 0;
+  align-items: center;
+  border: 1px solid var(--tech-blue-main);
+}
+
+.change:hover {
+  border-color: var(--tech-blue-light);
+}
+
+.change p {
+  margin: 0 1rem;
+  font-weight: 700;
+}
+
+.not_active svg,
+.not_active p {
+  color: var(--tech-blue-dark);
+  fill: var(--tech-blue-dark);
+}
+
+.not_active:hover {
+  box-shadow: 0 0 0.2rem var(--tech-blue-light);
+}
+
+.not_active:hover svg,
+.not_active:hover p {
+  color: var(--tech-blue-light);
+  fill: var(--tech-blue-light);
+}
+
+.active svg,
+.active p {
+  color: var(--metallic-light);
+  fill: var(--metallic-light);
+}

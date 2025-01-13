@@ -1,29 +1,169 @@
+/*
+ * Portfolio Color Palette & Usage Guide
+ * Inspired by modern tech branding
+ * Optimized for professional software developer portfolio
+ * 
+ * COLOR STRATEGY
+ * =============
+ * This palette combines technological blues with metallic accents
+ * to create a modern and professional visual identity.
+ * 
+ * Primary Colors Usage:
+ * -------------------
+ * - tech-blue-dark: Main brand element, ideal for headers
+ * - tech-blue-main: Active navigation and main interactive elements
+ * - tech-blue-light: Hover effects and secondary accents
+ * 
+ * Metallic Accents Usage:
+ * ---------------------
+ * - metallic-light: Premium and decorative elements
+ * - metallic-dark: Contrasts and accent elements
+ * 
+ * Theme Mode Recommendations:
+ * -------------------------
+ * Light Mode (Default):
+ * - Advantages:
+ *   • Better readability of technical elements
+ *   • Stronger visual impact of metallic colors
+ *   • Professional and modern appearance
+ * - Implementation:
+ *   • Main background: neutral-100
+ *   • Alternate sections: neutral-50
+ *   • Text: neutral-800
+ * 
+ * Dark Mode:
+ * - Advantages:
+ *   • Enhanced futuristic appearance
+ *   • Highlighting of metallic effects
+ *   • Reduced eye strain
+ * - Implementation:
+ *   • Main background: neutral-900
+ *   • Alternate sections: neutral-800
+ *   • Text: neutral-50
+ * 
+ * Best Practices:
+ * -------------
+ * 1. Use metallic gradients sparingly
+ * 2. Maintain high contrast for accessibility
+ * 3. Reserve metallic effects for important elements
+ * 4. Prefer smooth transitions between sections
+ * 5. Test readability in both modes
+ */
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Primary technological colors */
+  --tech-blue-dark: #001b44;
+  --tech-blue-main: #003785;
+  --tech-blue-light: #0057d9;
 
-  color: var(--white);
-  background-color: var(--black);
+  /* Metallic accents */
+  --metallic-light: #e8edf2;
+  --metallic-dark: #b7c3cc;
+  /* Neutrals */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
 
+  color: var(--neutral-900);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  --white: #fbfcfe;
-  --gray: #919192;
-  --gray-dark: #2d2d2d;
-  --black: #0f0f0f;
-  --blue: #005d9b;
-  --blue-sky: #00a8e8;
-  --blue-dark: #0d3357;
+/* Adjustments for dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Adjusted versions of blues for dark mode */
+    --tech-blue-dark: #002966;
+    --tech-blue-main: #0047ab;
+    --tech-blue-light: #0066ff;
+
+    /* Adjusted metallic accents */
+    --metallic-light: #f0f4f8;
+    --metallic-dark: #c8d1da;
+  }
+}
+
+/* Examples of metallic gradients */
+.metallic-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--metallic-light) 0%,
+    var(--metallic-dark) 100%
+  );
+}
+
+/* Example of technological gradient */
+.tech-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--tech-blue-dark) 0%,
+    var(--tech-blue-light) 100%
+  );
+}
+
+.container {
+  min-height: calc(100vh - 5rem);
+  padding-top: 5rem;
+}
+
+body {
+  background: var(--metallic-light);
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar-track {
+  background: var(--neutral-400);
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: var(--tech-blue-dark);
+  border-radius: 5px;
+}
+
+/* Hover effect for the scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tech-blue-main);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  cursor: pointer;
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
   list-style: none;
   text-decoration: none;
   transition: all 0.3s linear;
+
+  /* unselectable*/
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -moz-user-select: none;
 }

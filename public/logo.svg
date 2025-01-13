@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+  <defs>
+    <linearGradient id="professional-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="30%" stop-color="#2563EB"/>
+      <stop offset="70%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    
+    <filter id="subtle-shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="1" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <style>
+    .text-primary {
+      font-family: 'Arial Black', sans-serif;
+      font-weight: 800;
+      fill: url(#professional-gradient);
+      filter: url(#subtle-shadow);
+    }
+
+    .main-text {
+      font-size: 85px;
+      letter-spacing: -3px;
+    }
+
+    .dev-text {
+      font-size: 65px;
+      letter-spacing: 0px;
+    }
+
+    .accent {
+      stroke: url(#accent-gradient);
+      stroke-width: 4;
+      stroke-line: round;
+      fill: none;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes drawAccent {
+      from { stroke-dashoffset: 400; }
+      to { stroke-dashoffset: 0; }
+    }
+
+    .animate-text {
+      animation: fadeInSlide 1.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    .animate-accent {
+      stroke-dasharray: 400;
+      animation: drawAccent 2s ease-out forwards;
+    }
+
+    .delay-dev { animation-delay: 1s; }
+    .delay-accent { animation-delay: 1.2s; }
+  </style>
+
+  <g transform="translate(40, 120)">
+    <!-- principal text -->
+    <g class="text-primary">
+      <text class="main-text animate-text">AF</text>
+      <text x="120" y="0" class="dev-text animate-text delay-dev">dev</text>
+    </g>
+    
+    <!-- Accents -->
+    <path d="M 10,20 L 240,20 M 20,30 L 230,30" 
+          class="accent animate-accent delay-accent"/>
+  </g>
+</svg>
