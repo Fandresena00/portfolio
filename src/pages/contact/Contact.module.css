@@ -1,0 +1,121 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  margin: 3vh;
+}
+
+.contact div {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0.5rem 0;
+  font-size: 0.7rem;
+  align-items: center;
+}
+.contact div h3 {
+  color: var(--neutral-800);
+}
+
+.contact div svg {
+  margin: 0 0.5rem;
+  width: 20px;
+  height: 20px;
+  fill: var(--neutral-800);
+}
+
+/* ================ send email ================== */
+
+.emailing {
+  margin: 1vh 0;
+  padding: 1rem 4vw;
+  width: 30vw;
+  min-width: 25rem;
+  border-radius: 5px;
+  border: 1px solid var(--metallic-light);
+  box-shadow: 0.1rem 0.1rem 0.3rem var(--tech-blue-light);
+}
+
+.emailing h4 {
+  color: var(--tech-blue-light);
+  margin: 2vh 0;
+  font-size: 1.2rem;
+}
+
+.emailing form {
+  margin: 2vh 0;
+  width: 100%;
+}
+
+.emailing form div {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5vh 0;
+}
+
+.emailing form div label {
+  color: var(--neutral-800);
+  margin: 0.5vh 0.8rem;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.emailing form div input,
+.emailing form div textarea {
+  padding: 0.35rem 0.5rem;
+  border-radius: 5px;
+  color: var(--neutral-900);
+  border: 1px solid var(--tech-blue-light);
+}
+
+.emailing form div textarea {
+  width: 100%;
+  height: 7rem;
+  resize: none;
+}
+
+.emailing form div input:focus,
+.emailing form div textarea:focus {
+  border: 1px var(--neutral-800t);
+  box-shadow: 0 0 0.4rem var(--tech-blue-light);
+  outline: none;
+}
+
+.submit_button {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.submit_button button {
+  color: var(--metallic-light);
+  padding: 0.4rem 2rem;
+  border-radius: 3px;
+  border: 1px var(--metallic-light);
+  margin: 0 auto;
+}
+
+.submit_button button:hover {
+  background: var(--metallic-light);
+  border-color: var(--tech-blue-light);
+  color: var(--tech-blue-main);
+
+  filter: drop-shadow(0 0 0.5rem var(--tech-blue-light));
+}
+
+.success,
+.failed {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.success {
+  color: green;
+}
+
+.failed {
+  color: red;
+}

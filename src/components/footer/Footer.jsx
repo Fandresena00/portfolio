@@ -2,7 +2,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={`${styles.footer} tech-gradient`}>
+    <footer className={`${styles.footer} tech-gradient`}>
       <div className={styles.icon}>
         <a href="https://github.com/Fandresena00/" target="_blank">
           <svg role="img" viewBox="0 0 24 24">
@@ -34,6 +34,7 @@ export default function Footer() {
           </svg>
         </a>
       </div>
-    </div>
+      <p>&copy; 2024 Fandresena. All rights reserved.</p>
+    </footer>
   );
 }

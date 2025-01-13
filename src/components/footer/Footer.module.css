@@ -1,15 +1,24 @@
 .footer {
-  height: 4rem;
+  text-align: center;
+  height: 5rem;
+  align-content: center;
+  color: var(--metallic-light);
 }
 
 .icon {
+  margin: 1rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .icon a svg {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   fill: var(--metallic-light);
+}
+
+.footer p {
+  margin: 1rem 0;
+  font-size: 0.8rem;
 }

@@ -3,10 +3,6 @@
   text-align: center;
 }
 
-.container h2 {
-  font-size: 200%;
-  color: var(--tech-blue-main);
-}
 .change_nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

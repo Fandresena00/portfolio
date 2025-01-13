@@ -12,6 +12,7 @@ export default function Project() {
   return (
     <div className="container">
       <div className={styles.container}>
+        <h2>Projects</h2>
         <ProjectItems image={projectImage} />
       </div>
     </div>

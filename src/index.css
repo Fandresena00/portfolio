@@ -114,7 +114,11 @@
   min-height: calc(100vh - 5rem);
   padding-top: 5rem;
 }
-
+.container h2 {
+  text-align: center;
+  font-size: 200%;
+  color: var(--tech-blue-main);
+}
 body {
   background: var(--metallic-light);
   background-repeat: no-repeat;
