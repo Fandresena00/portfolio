@@ -1,55 +1,3 @@
-/*
- * Portfolio Color Palette & Usage Guide
- * Inspired by modern tech branding
- * Optimized for professional software developer portfolio
- * 
- * COLOR STRATEGY
- * =============
- * This palette combines technological blues with metallic accents
- * to create a modern and professional visual identity.
- * 
- * Primary Colors Usage:
- * -------------------
- * - tech-blue-dark: Main brand element, ideal for headers
- * - tech-blue-main: Active navigation and main interactive elements
- * - tech-blue-light: Hover effects and secondary accents
- * 
- * Metallic Accents Usage:
- * ---------------------
- * - metallic-light: Premium and decorative elements
- * - metallic-dark: Contrasts and accent elements
- * 
- * Theme Mode Recommendations:
- * -------------------------
- * Light Mode (Default):
- * - Advantages:
- *   • Better readability of technical elements
- *   • Stronger visual impact of metallic colors
- *   • Professional and modern appearance
- * - Implementation:
- *   • Main background: neutral-100
- *   • Alternate sections: neutral-50
- *   • Text: neutral-800
- * 
- * Dark Mode:
- * - Advantages:
- *   • Enhanced futuristic appearance
- *   • Highlighting of metallic effects
- *   • Reduced eye strain
- * - Implementation:
- *   • Main background: neutral-900
- *   • Alternate sections: neutral-800
- *   • Text: neutral-50
- * 
- * Best Practices:
- * -------------
- * 1. Use metallic gradients sparingly
- * 2. Maintain high contrast for accessibility
- * 3. Reserve metallic effects for important elements
- * 4. Prefer smooth transitions between sections
- * 5. Test readability in both modes
- */
-
 :root {
   /* Primary technological colors */
   --tech-blue-dark: #001b44;
@@ -76,6 +24,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --tech-blue-rgb: 61, 90, 254;
 }
 
 /* Adjustments for dark mode */
@@ -164,6 +113,7 @@ button {
   list-style: none;
   text-decoration: none;
   transition: all 0.3s linear;
+  font-display: swap;
 
   /* unselectable*/
   user-select: none;

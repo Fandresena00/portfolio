@@ -11,21 +11,23 @@ export default function App() {
     <>
       <Header />
 
-      <Element name="home">
-        <Home />
-      </Element>
+      <main>
+        <Element name="home">
+          <Home />
+        </Element>
 
-      <Element name="profile">
-        <Profile />
-      </Element>
+        <Element name="profile">
+          <Profile />
+        </Element>
 
-      <Element name="project">
-        <Project />
-      </Element>
+        <Element name="project">
+          <Project />
+        </Element>
 
-      <Element name="contact">
-        <Contact />
-      </Element>
+        <Element name="contact">
+          <Contact />
+        </Element>
+      </main>
 
       <Footer />
     </>
