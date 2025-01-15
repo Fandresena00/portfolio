@@ -1,0 +1,263 @@
+.parallaxContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -1;
+  background: linear-gradient(to bottom, #b3d9ff 0%, #ffffff 100%);
+}
+
+.parallaxLayer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.mountain {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid #002966;
+  filter: drop-shadow(0 0 20px rgba(0, 41, 102, 0.3));
+}
+
+.mountainSecondary {
+  left: 30%;
+  bottom: 10%;
+  border-left: 120px solid transparent;
+  border-right: 120px solid transparent;
+  border-bottom: 240px solid #0047ab;
+  z-index: -1;
+}
+
+.mountainTertiary {
+  left: 70%;
+  bottom: 12%;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #0066ff;
+  z-index: -2;
+}
+
+.cloud {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  left: 15px;
+}
+
+.cloud::after {
+  width: 70px;
+  height: 70px;
+  top: -30px;
+  right: 15px;
+}
+
+.mist {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
+  pointer-events: none;
+}
+
+/* Étoiles */
+.starsContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+
+/* Montagnes */
+.mountainBack {
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-bottom: 400px solid #002966;
+  filter: blur(2px);
+  opacity: 0.7;
+}
+
+.mountainMid {
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 300px solid #0047ab;
+  filter: blur(1px);
+  opacity: 0.8;
+}
+
+.mountainFront {
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid #0066ff;
+  opacity: 0.9;
+}
+
+/* Nuages */
+.cloud {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+}
+
+.cloud::before,
+.cloud::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 60px;
+  height: 60px;
+  top: -25px;
+  left: 15px;
+}
+
+.cloud::after {
+  width: 80px;
+  height: 80px;
+  top: -35px;
+  right: 15px;
+}
+
+/* Premier plan */
+.foreground {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+}
+
+.mist {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
+  pointer-events: none;
+  animation: mistFlow 20s infinite linear;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  animation: particleFloat 20s infinite linear;
+}
+
+/* Overlay de couleur */
+.colorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(0, 102, 255, 0.1));
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Animations */
+@keyframes mistFlow {
+  0% {
+    transform: translateX(-5%);
+  }
+  50% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Effets au survol */
+.parallaxContainer:hover .parallaxLayer {
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+/* Media Queries pour le mobile */
+@media (max-width: 768px) {
+  .mountain {
+    border-left-width: 100px;
+    border-right-width: 100px;
+    border-bottom-width: 200px;
+  }
+
+  .cloud {
+    transform: scale(0.8);
+  }
+
+  .particles {
+    background-size: 15px 15px;
+  }
+}

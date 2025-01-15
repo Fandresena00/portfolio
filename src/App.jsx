@@ -5,11 +5,13 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Project from "./pages/project/Project";
 import Footer from "./components/footer/Footer";
-import SmokeEffect from "./components/effects/SmokeEffect";
+import SmokeEffect from "./components/effects/cursor/SmokeEffect";
+import ParallaxBackground from "./components/effects/parallax/ParallaxBackground";
 
 export default function App() {
   return (
     <>
+      <ParallaxBackground />
       <Header />
 
       <main>
