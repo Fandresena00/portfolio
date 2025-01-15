@@ -13,11 +13,10 @@
   display: flex;
   justify-content: center;
   border: none;
-  border-radius: 8px;
   margin: 0 1rem;
   padding: 0.2rem 0;
   align-items: center;
-  border: 1px solid var(--tech-blue-main);
+  border-bottom: 1px solid var(--tech-blue-main);
 }
 
 .change:hover {

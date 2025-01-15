@@ -18,7 +18,7 @@ export default function Profile() {
           className={`${styles.change}  ${
             change === "about"
               ? `${styles.active} tech-gradient`
-              : styles.not_active
+              : `${styles.not_active} metallic-gradient`
           }`}
           onClick={() => {
             handleChange("about");
@@ -35,7 +35,7 @@ export default function Profile() {
           className={`${styles.change}  ${
             change === "skills"
               ? `${styles.active} tech-gradient`
-              : styles.not_active
+              : `${styles.not_active} metallic-gradient`
           }`}
           onClick={() => {
             handleChange("skills");

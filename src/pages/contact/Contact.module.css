@@ -92,17 +92,39 @@
 
 .submit_button button {
   color: var(--metallic-light);
-  padding: 0.4rem 2rem;
-  border-radius: 3px;
-  border: 1px var(--metallic-light);
+  width: 6rem;
+  height: 2rem;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--tech-blue-light);
   margin: 0 auto;
+  transition: all 0.3s ease;
+  background: linear-gradient(
+    135deg,
+    var(--tech-blue-dark) 0%,
+    var(--tech-blue-light) 100%
+  );
 }
 
-.submit_button button:hover {
-  background: var(--metallic-light);
-  border-color: var(--tech-blue-light);
-  color: var(--tech-blue-main);
+.submit_button button:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    var(--tech-blue-dark) 0%,
+    var(--tech-blue-light) 100%
+  );
+}
 
+.submit_button button:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    var(--tech-blue-light) 0%,
+    var(--tech-blue-main) 100%
+  );
+  border-color: var(--tech-blue-main);
+  color: white;
   filter: drop-shadow(0 0 0.5rem var(--tech-blue-light));
 }
 
@@ -118,4 +140,106 @@
 
 .failed {
   color: red;
+}
+
+.sending {
+  margin-top: 0.2rem;
+  position: relative;
+  animation: sendingMove 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.sending svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--metallic-light);
+}
+
+.sending::before,
+.sending::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--metallic-light);
+  opacity: 0.3;
+  filter: blur(2px);
+}
+
+.sending::before {
+  animation: trailParticles1 1.5s infinite;
+}
+
+.sending::after {
+  animation: trailParticles2 1.5s infinite;
+}
+
+@keyframes sendingMove {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    filter: drop-shadow(0 0 5px var(--metallic-light));
+  }
+  25% {
+    transform: translate(-0.2rem, -0.1rem) rotate(-3deg);
+    filter: drop-shadow(0 0 8px var(--metallic-light));
+  }
+  50% {
+    transform: translate(-0.4rem, 0) rotate(0deg);
+    filter: drop-shadow(0 0 5px var(--metallic-light));
+  }
+  75% {
+    transform: translate(-0.2rem, 0.1rem) rotate(3deg);
+    filter: drop-shadow(0 0 8px var(--metallic-light));
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+    filter: drop-shadow(0 0 5px var(--metallic-light));
+  }
+}
+
+@keyframes trailParticles1 {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-25px, -5px) scale(0.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-50px, -10px) scale(0.2);
+    opacity: 0;
+  }
+}
+
+@keyframes trailParticles2 {
+  0% {
+    transform: translate(0, 0) scale(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-30px, 5px) scale(0.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translate(-60px, 10px) scale(0.2);
+    opacity: 0;
+  }
+}
+
+/* Ajout de particules supplémentaires avec des data-attributes */
+.sending {
+  --particles: 5;
+}
+
+.sending::before {
+  box-shadow: -15px 0 var(--metallic-light), -30px 5px var(--metallic-light),
+    -25px -5px var(--metallic-light), -40px 0 var(--metallic-light);
+  filter: blur(3px);
+}
+
+.sending::after {
+  box-shadow: -20px 0 var(--metallic-light), -35px -5px var(--metallic-light),
+    -30px 5px var(--metallic-light), -45px 0 var(--metallic-light);
+  filter: blur(3px);
 }
