@@ -18,11 +18,11 @@ const SmokeEffect = () => {
     };
 
     const createParticle = () => ({
-      x: mousePos.x + (Math.random() - 0.5) * 10,
-      y: mousePos.y + (Math.random() - 0.5) * 10,
-      size: Math.random() * 4 + 2,
-      speedX: (Math.random() - 0.5) * 2,
-      speedY: (Math.random() - 0.5) * 2,
+      x: mousePos.x + (Math.random() - 0.5) * 5,
+      y: mousePos.y + (Math.random() - 0.5) * 5,
+      size: Math.random() * 2 + 1,
+      speedX: (Math.random() - 0.5) * 1,
+      speedY: (Math.random() - 0.5) * 1,
       life: 1,
       color: ["#002966", "#0047ab", "#0066ff"][Math.floor(Math.random() * 3)],
     });
@@ -31,7 +31,7 @@ const SmokeEffect = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Ajouter de nouvelles particules
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 2; i++) {
         if (mousePos.x !== 0 || mousePos.y !== 0) {
           particles.push(createParticle());
         }
@@ -54,7 +54,7 @@ const SmokeEffect = () => {
             .padStart(2, "0");
         ctx.fill();
 
-        if (p.life <= 0 || p.size < 0.5) {
+        if (p.life <= 0 || p.size < 0.3) {
           particles.splice(i, 1);
         }
       }
