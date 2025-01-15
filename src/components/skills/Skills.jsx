@@ -1,4 +1,22 @@
 import styles from "./Skills.module.css";
+
+// Importing front icons
+import React_icon from "../../assets/front-end/react.svg";
+import Bootstrap_icon from "../../assets/front-end/bootstrap.svg";
+import Tailwind_icon from "../../assets/front-end/tailwindcss.svg";
+import Figma_icon from "../../assets/front-end/figma.svg";
+import Html_icon from "../../assets/front-end/html5.svg";
+import Css3_icon from "../../assets/front-end/css3.svg";
+import JavaScript_icon from "../../assets/front-end/javascript.svg";
+
+// Importing back icons
+import Java_icon from "../../assets/back-end/java.svg";
+import SpringBoot_icon from "../../assets/back-end/spring-boot.svg";
+import Postgresql_icon from "../../assets/back-end/postgresql.svg";
+import Mongodb_icon from "../../assets/back-end/mongodb-icon.svg";
+import Postman_icon from "../../assets/back-end/postman-icon.svg";
+import Jenkins_icon from "../../assets/back-end/jenkins-icon.svg";
+
 import SkillsComponent from "./skills_components/SkillsComponent";
 
 export default function Skills() {
@@ -13,13 +31,13 @@ export default function Skills() {
       user experiences. Additionally, I have a solid grasp of the fundamentals of front-end development, including 
       HTML, CSS, and JavaScript, which form the foundation of any web project.`,
     icons: [
-      "/src/assets/front-end/react.svg",
-      "/src/assets/front-end/bootstrap.svg",
-      "/src/assets/front-end/tailwindcss.svg",
-      "/src/assets/front-end/figma.svg",
-      "/src/assets/front-end/html5.svg",
-      "/src/assets/front-end/css3.svg",
-      "/src/assets/front-end/javascript.svg",
+      React_icon,
+      Bootstrap_icon,
+      Tailwind_icon,
+      Figma_icon,
+      Html_icon,
+      Css3_icon,
+      JavaScript_icon,
     ],
   };
 
@@ -32,12 +50,12 @@ export default function Skills() {
         API creation, I use tools like Postman to test and validate their functionality. My 
        approach also includes automating deployment with tools like Jenkins.`,
     icons: [
-      "/src/assets/back-end/java.svg",
-      "/src/assets/back-end/spring-boot.svg",
-      "/src/assets/back-end/postgresql.svg",
-      "/src/assets/back-end/mongodb-icon.svg",
-      "/src/assets/back-end/postman-icon.svg",
-      "/src/assets/back-end/jenkins-icon.svg",
+      Java_icon,
+      SpringBoot_icon,
+      Postgresql_icon,
+      Mongodb_icon,
+      Postman_icon,
+      Jenkins_icon,
     ],
   };
 
