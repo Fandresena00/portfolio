@@ -11,6 +11,11 @@
   transform: translateY(-5px);
 }
 
+.skill:hover::before,
+.skill:hover::after {
+  display: none;
+}
+
 .skill h3 {
   font-size: clamp(1rem, 2vw, 1.2rem);
   color: var(--tech-blue-light);

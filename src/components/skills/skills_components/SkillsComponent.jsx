@@ -7,11 +7,7 @@ export default function SkillsComponent({ title, description, icons = [] }) {
       <h3>{title}</h3>
       <div className={styles.description}>
         <p>{description}</p>
-        <div className={styles.icon}>
-          {icons.map((icon, index) => (
-            <img key={index} src={icon} alt={`icon-${index}`} />
-          ))}
-        </div>
+        <div className={styles.icon}>{icons.map((icon) => icon)}</div>
       </div>
     </div>
   );

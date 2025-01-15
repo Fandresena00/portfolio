@@ -5,7 +5,7 @@ import Home from "./pages/home/Home";
 import Profile from "./pages/profile/Profile";
 import Project from "./pages/project/Project";
 import Footer from "./components/footer/Footer";
-import SmokeTrailCursor from "./components/SmokeTrailCursor";
+import SmokeEffect from "./components/effects/SmokeEffect";
 
 export default function App() {
   return (
@@ -32,7 +32,7 @@ export default function App() {
 
       <Footer />
 
-      <SmokeTrailCursor />
+      <SmokeEffect />
     </>
   );
 }
