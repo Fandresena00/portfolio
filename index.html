@@ -2,35 +2,120 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Strict-Transport-Security"
+      content="max-age=63072000; includeSubDomains; preload"
+    />
+    <meta
+      http-equiv="Cache-Control"
+      content="public, max-age=31536000, immutable"
+    />
+
+    <!-- Other Security Headers Best Practices -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta
+      http-equiv="Referrer-Policy"
+      content="strict-origin-when-cross-origin"
+    />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="geolocation=(), microphone=(), camera=()"
+    />
+
     <link rel="icon" type="image/svg+xml" href="/link-icon.webp" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap"
       rel="stylesheet"
+      crossorigin="anonymous"
     />
 
-    <!-- SEO -->
-    <title>Fandresena - Junior Web Developer & Junior Java developer</title>
+    <!-- Basic SEO tags -->
+    <title>Anjara Fandresena - Junior Java & Web Developer</title>
+    <link rel="canonical" href="https://af-fandresena.netlify.app/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Anjara Fandresena" />
+
+    <!-- Enhanced meta description -->
     <meta
       name="description"
-      content="Visit the portfolio of junior developer Fandresena skilled in using Java, Spring boot and web developer. View projects and talents in play. 
-      "
+      content="Portfolio of Anjara Fandresena - Junior Developer specializing in Java, Spring Boot, and full-stack web development. Explore my projects, technical skills, and achievements in building scalable, high-performance applications."
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Fandresena - Junior Web Developer" />
+
+    <!-- Enhanced keywords -->
+    <meta
+      name="keywords"
+      content="Anjara Fandresena, developer portfolio, Java developer, Spring Boot, full-stack developer, junior web developer, backend developer, frontend developer, Madagascar, web applications, REST API, modern web development"
+    />
+
+    <!-- Optimized Open Graph Tags -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Anjara Fandresena - Junior Java & Web Developer"
+    />
     <meta
       property="og:description"
-      content="Projects in Java, Spring Boot, and web development."
+      content="Portfolio of Anjara Fandresena - Developer specializing in Java, Spring Boot, and full-stack web development. Explore my projects and discover my application development skills."
     />
     <meta property="og:url" content="https://af-fandresena.netlify.app/" />
+    <meta property="og:image" content="/STD22112.webp" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:af-fandresena" content="Anjara Fandresena Portfolio" />
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Anjara Fandresena - Junior Java & Web Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Anjara Fandresena - Developer specializing in Java, Spring Boot, and full-stack web development."
+    />
+    <meta name="twitter:image" content="/STD22112.webp" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Enhanced Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Anjara Fandresena",
+        "url": "https://af-fandresena.netlify.app/",
+        "jobTitle": "Junior Developer",
+        "description": "Junior Developer specializing in Java, Spring Boot, and modern web technologies. Passionate about building scalable and high-performance applications.",
+        "knowsAbout": [
+          "Java",
+          "Spring Boot",
+          "Web Development",
+          "Frontend Development",
+          "Backend Development",
+          "REST APIs",
+          "Modern Web Technologies"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/anjara-fandresena-rafaliarimanana-a61a082b7/",
+          "https://github.com/Fandresena00/portfolio.git"
+        ],
+        "nationality": "Madagascar",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Madagascar"
+        }
+      }
+    </script>
   </body>
 </html>
