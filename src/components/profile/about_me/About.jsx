@@ -25,6 +25,36 @@ export default function About() {
             </button>
           </div>
         </div>
+
+        <div className={styles.detailedInfo}>
+          <h3>Professional Overview</h3>
+          <p>
+            Passionate junior developer based in Madagascar with expertise in
+            Java and modern web technologies. I specialize in creating robust
+            web applications using Spring Boot and React.js. My focus is on
+            delivering high-performance, scalable solutions while continuously
+            expanding my technical skills.
+          </p>
+
+          <div className={styles.expertise}>
+            <h4>Core Expertise:</h4>
+            <ul>
+              <li>Full Stack Development (Java, Spring Boot, React.js)</li>
+              <li>RESTful API Design and Implementation</li>
+              <li>Database Design and Management</li>
+              <li>Web Security Best Practices</li>
+            </ul>
+          </div>
+
+          <div className={styles.languages}>
+            <h4>Languages:</h4>
+            <ul>
+              <li>French (Fluent)</li>
+              <li>English (Professional)</li>
+              <li>Malagasy (Native)</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </>
   );
