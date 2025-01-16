@@ -5,16 +5,18 @@ export default function Project() {
   const ManageProject = {
     project: "T.Manage",
     description:
-      "An intuitive web application for managing tasks, organizing projects and tracking progress within teams.",
+      "I have built a full-stack project management tool using React and Spring Boot with user login and more.",
     technologies: "React, Java, Spring boot, Postgresql, Jenkins",
     gitHub: "https://github.com/Fandresena00/T.Gestion.git",
     appLink: "https://github.com/Fandresena00/T.Gestion.git",
     ImageDetails: [
-      "/project/image1.png",
-      "/project/image2.png",
-      "/project/image3.png",
-      "/project/image4.png",
+      "/project/image1.webp",
+      "/project/image2.webp",
+      "/project/image3.webp",
+      "/project/image4.webp",
     ],
+    ImageAlt:
+      "An image of a management application created out of react and spring boot.",
   };
 
   return (

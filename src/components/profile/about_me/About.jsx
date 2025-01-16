@@ -4,16 +4,15 @@ export default function About() {
   return (
     <>
       <div className={`${styles.container} metallic-gradient border-animation`}>
-        <img src="/STD22112.png" alt="my pic" />
+        <img src="/STD22112.webp" alt="image" />
         <div>
           <h2>Anjara Fandresena</h2>
           <h3>Software developer</h3>
           <p>
-            Passionate junior developer, I build robust and scalable
-            applications by combining front-end and back-end skills. My approach
-            focuses on delivering high-performance, quality solutions while
-            continuously expanding my skills to provide optimized user
-            experiences.
+            As an aspiring junior developer, I am dedicated and enthusiastic
+            about creating applications Web Developer Resume Sample. My approach
+            is to provide quality and high-performance solutions while learning
+            more to provide optimized solutions.
           </p>
           <div className={styles.buttons}>
             <button>

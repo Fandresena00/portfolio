@@ -3,8 +3,15 @@ import { useState, useCallback } from "react";
 import styles from "./ProjectItems.module.css";
 
 export default function ProjectItems({ details }) {
-  const { project, description, technologies, gitHub, appLink, ImageDetails } =
-    details;
+  const {
+    project,
+    description,
+    technologies,
+    gitHub,
+    appLink,
+    ImageDetails,
+    ImageAlt,
+  } = details;
   const [isHeld, setIsHeld] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [lastX, setLastX] = useState(0);
@@ -47,7 +54,7 @@ export default function ProjectItems({ details }) {
             <span key={index} style={{ "--i": index }}>
               <img
                 src={project}
-                alt={`Project view ${index + 1}`}
+                alt={`${ImageAlt} ${index + 1}`}
                 loading="lazy"
               />
             </span>
@@ -56,8 +63,8 @@ export default function ProjectItems({ details }) {
       </div>
 
       <div className={styles.info}>
-        <h2 className={styles.title}>T.P.Manage</h2>
-        <h3 className={styles.subtitle}>Project management application</h3>
+        <h2 className={styles.logo}>T.P.Manage</h2>
+        <h3 className={styles.subtitle}>Project Management App</h3>
         <div className={styles.details}>
           {[
             {

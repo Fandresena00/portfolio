@@ -6,13 +6,7 @@ export default function Skills() {
   const frontDetails = {
     title: "Front-end",
     description: `
-      I am proficient in modern libraries and frameworks like 
-      React.js and React Native, enabling the
-      creation of high-performance, responsive web and mobile applications. I also use 
-      Bootstrap and Tailwind CSS to design sleek, adaptive interfaces, 
-      and Figma for prototyping and UI/UX design. My goal is to deliver smooth, optimized 
-      user experiences. Additionally, I have a solid grasp of the fundamentals of front-end development, including 
-      HTML, CSS, and JavaScript, which form the foundation of any web project.`,
+      I’m skilled in using modern libraries and frameworks like React.js and React Native to develop high-performance responsive web and mobile applications. I use Bootstrap and Tailwind CSS to design sleek and adaptive interfaces along with Figma for prototyping and UI/UX design I want to provide smooth and optimized user experiences. Also, I have a good idea of the basics of front-end development, which include HTML, CSS, and Javascript. These things are the foundation of any web project.`,
     icons: [
       <ReactIcon key="react" />,
       <Bootstrap_icon key="bootstrap" />,
@@ -27,11 +21,7 @@ export default function Skills() {
   const backDetails = {
     title: "Back-end",
     description: `
-      As a junior developer, I have gained skills in backend development with Java and 
-      Spring Boot, allowing me to create robust and scalable applications. I use PostgreSQL and 
-      MongoDB for database management, ensuring reliable and efficient solutions. While I am still developing my skills in 
-        API creation, I use tools like Postman to test and validate their functionality. My 
-       approach also includes automating deployment with tools like Jenkins.`,
+      As a junior developer, I know backend development with Java and Spring Boot, which helps me create powerful and scalable apps. I work with PostgreSQL and MongoDB to manage databases.  I’m still working to learn everything I need to know about creating APIs. I usually use Postman to test and check APIs to make sure they work. My method also involves automating deployment using Jenkins.`,
     icons: [
       <Java_icon key="java" />,
       <SpringBoot_icon key="spring" />,
