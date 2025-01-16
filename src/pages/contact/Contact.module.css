@@ -1,8 +1,6 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  align-content: center;
 }
 
 .contact {
@@ -15,6 +13,8 @@
   margin: 0.5rem 0;
   font-size: 0.7rem;
   align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 .contact div h3 {
   color: var(--neutral-800);
@@ -30,10 +30,9 @@
 /* ================ send email ================== */
 
 .emailing {
-  margin: 1vh 0;
+  margin: 1vh auto;
   padding: 1rem 4vw;
   width: 30vw;
-  min-width: 25rem;
   border-radius: 5px;
   border: 1px solid var(--metallic-light);
   box-shadow: 0.1rem 0.1rem 0.3rem var(--tech-blue-light);
@@ -154,57 +153,25 @@
   fill: var(--metallic-light);
 }
 
-/* Particules scintillantes */
-.sending::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(
-    circle,
-    var(--metallic-light) 0%,
-    transparent 60%
-  );
-  pointer-events: none;
-  animation: particleEffect 1.5s infinite ease-in-out;
-  mix-blend-mode: screen;
-  opacity: 0.6;
-}
-
-@keyframes particleEffect {
-  0%,
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 1;
+@media screen and (min-width: 1024px) {
+  .emailing {
+    width: 50vw;
   }
 }
 
-@keyframes sendingMove {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-    filter: drop-shadow(0 0 5px var(--metallic-light));
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .emailing {
+    width: 70vw;
   }
-  25% {
-    transform: translate(-0.2rem, -0.1rem) rotate(-3deg);
-    filter: drop-shadow(0 0 8px var(--metallic-light));
+}
+@media screen and (max-width: 767px) {
+  .emailing {
+    width: 85vw;
   }
-  50% {
-    transform: translate(-0.4rem, 0) rotate(0deg);
-    filter: drop-shadow(0 0 5px var(--metallic-light));
-  }
-  75% {
-    transform: translate(-0.2rem, 0.1rem) rotate(3deg);
-    filter: drop-shadow(0 0 8px var(--metallic-light));
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
-    filter: drop-shadow(0 0 5px var(--metallic-light));
+}
+
+@media (max-width: 480px) {
+  .emailing {
+    width: 90vw;
   }
 }

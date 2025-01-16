@@ -1,19 +1,27 @@
 import ProjectItems from "../../components/project/ProjectItems";
 import styles from "./Project.module.css";
 
-import project1 from "../../assets/project/image1.png";
-import project2 from "../../assets/project/image2.png";
-import project3 from "../../assets/project/image3.png";
-import project4 from "../../assets/project/image4.png";
-
 export default function Project() {
-  const projectImage = { project1, project2, project3, project4 };
+  const ManageProject = {
+    project: "T.Manage",
+    description:
+      "An intuitive web application for managing tasks, organizing projects and tracking progress within teams.",
+    technologies: "React, Java, Spring boot, Postgresql, Jenkins",
+    gitHub: "https://github.com/Fandresena00/T.Gestion.git",
+    appLink: "https://github.com/Fandresena00/T.Gestion.git",
+    ImageDetails: [
+      "/project/image1.png",
+      "/project/image2.png",
+      "/project/image3.png",
+      "/project/image4.png",
+    ],
+  };
 
   return (
     <div className="container">
       <div className={styles.container}>
         <h2>Projects</h2>
-        <ProjectItems image={projectImage} />
+        <ProjectItems details={ManageProject} />
       </div>
     </div>
   );

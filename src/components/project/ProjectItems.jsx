@@ -2,8 +2,9 @@
 import { useState, useCallback } from "react";
 import styles from "./ProjectItems.module.css";
 
-const ProjectItems = ({ image = {} }) => {
-  const { project1, project2, project3, project4 } = image;
+export default function ProjectItems({ details }) {
+  const { project, description, technologies, gitHub, appLink, ImageDetails } =
+    details;
   const [isHeld, setIsHeld] = useState(false);
   const [rotation, setRotation] = useState(0);
   const [lastX, setLastX] = useState(0);
@@ -28,8 +29,6 @@ const ProjectItems = ({ image = {} }) => {
     setIsHeld(false);
   }, []);
 
-  const projects = [project1, project2, project3, project4];
-
   return (
     <div className={styles.container}>
       <div className={styles.effect}>
@@ -44,7 +43,7 @@ const ProjectItems = ({ image = {} }) => {
           onTouchEnd={handleEnd}
           onMouseLeave={handleEnd}
         >
-          {projects.map((project, index) => (
+          {ImageDetails.map((project, index) => (
             <span key={index} style={{ "--i": index }}>
               <img
                 src={project}
@@ -63,28 +62,19 @@ const ProjectItems = ({ image = {} }) => {
           {[
             {
               label: "Description",
-              content:
-                "An intuitive web application for managing tasks, organizing projects and tracking progress within teams.",
+              content: description,
             },
             {
               label: "Technologies Used",
-              content: "React, Java, Spring boot, Postgresql, Jenkins",
+              content: technologies,
             },
             {
               label: "GitHub link",
-              content: (
-                <a href="https://github.com/Fandresena00/T.Gestion.git">
-                  T.Manage
-                </a>
-              ),
+              content: <a href={gitHub}>{project}</a>,
             },
             {
               label: "App link",
-              content: (
-                <a href="https://github.com/Fandresena00/T.Gestion.git">
-                  T.Manage
-                </a>
-              ),
+              content: <a href={appLink}>{project}</a>,
             },
           ].map(({ label, content }, index) => (
             <div key={index}>
@@ -96,6 +86,4 @@ const ProjectItems = ({ image = {} }) => {
       </div>
     </div>
   );
-};
-
-export default ProjectItems;
+}

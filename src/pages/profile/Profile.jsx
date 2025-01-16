@@ -1,6 +1,6 @@
 import { useState } from "react";
-import About from "../../components/about_me/About";
-import Skills from "../../components/skills/Skills";
+import About from "../../components/profile/about_me/About";
+import Skills from "../../components/profile/skills/Skills";
 import styles from "./Profile.module.css";
 
 export default function Profile() {

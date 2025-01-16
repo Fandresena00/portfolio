@@ -47,7 +47,7 @@
   justify-items: center;
 }
 
-.icon img {
+.icon svg {
   width: 30px;
   height: 30px;
 }
@@ -59,7 +59,7 @@
 @media (max-width: 768px) {
   .skill {
     min-width: unset;
-    width: 95%;
+    width: 80%;
   }
 
   .description {

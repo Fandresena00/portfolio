@@ -1,6 +1,6 @@
 .footer {
   text-align: center;
-  height: 5rem;
+  height: calc(fit-content + 2rem);
   align-content: center;
   color: var(--metallic-light);
 }
